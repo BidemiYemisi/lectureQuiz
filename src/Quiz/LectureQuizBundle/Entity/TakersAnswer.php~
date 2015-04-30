@@ -1,0 +1,130 @@
+<?php
+
+namespace Quiz\LectureQuizBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TakersAnswer
+ */
+class TakersAnswer
+{
+    /**
+     * @var string
+     * @ORM\Column(name="answercode", type="string", length= 300, nullable=false)
+     */
+    private $answercode;
+
+    /**
+     * @var integer
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Quiz\LectureQuizBundle\Entity\GradedQuestion
+     * @ORM\ManyToOne(targetEntity="Quiz\LectureQuizBundle\Entity\GradedQuestion", inversedBy="takers_answer")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="graded_question_id", referencedColumnName="id")
+     * })
+     *
+     */
+    private $gradedQuestion;
+
+
+
+    /**
+     * @var \Quiz\LectureQuizBundle\Entity\TfQuestion
+     *
+     * @ORM\ManyToOne(targetEntity="Quiz\LectureQuizBundle\Entity\TfQuestion", inversedBy ="takers_answer")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="tf_question_id", referencedColumnName="id")
+     * })
+     */
+    private $tfQuestion;
+
+
+    /**
+     * Set answercode
+     *
+     * @param string $answercode
+     * @return TakersAnswer
+     */
+    public function setAnswercode($answercode)
+    {
+        $this->answercode = $answercode;
+
+        return $this;
+    }
+
+    /**
+     * Get answercode
+     *
+     * @return string 
+     */
+    public function getAnswercode()
+    {
+        return $this->answercode;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+
+    /**
+     * Set gradedQuestion
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\GradedQuestion $gradedQuestion
+     * @return TakersAnswer
+     */
+    public function setGradedQuestion(\Quiz\LectureQuizBundle\Entity\GradedQuestion $gradedQuestion = null)
+    {
+        $this->gradedQuestion = $gradedQuestion;
+
+        return $this;
+    }
+
+    /**
+     * Get gradedQuestion
+     *
+     * @return \Quiz\LectureQuizBundle\Entity\GradedQuestion 
+     */
+    public function getGradedQuestion()
+    {
+        return $this->gradedQuestion;
+    }
+
+    /**
+     * Set tfQuestion
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\TfQuestion $tfQuestion
+     * @return TakersAnswer
+     */
+    public function setTfQuestion(\Quiz\LectureQuizBundle\Entity\TfQuestion $tfQuestion = null)
+    {
+        $this->tfQuestion = $tfQuestion;
+
+        return $this;
+    }
+
+    /**
+     * Get tfQuestion
+     *
+     * @return \Quiz\LectureQuizBundle\Entity\TfQuestion
+     */
+    public function getTfQuestion()
+    {
+        return $this->tfQuestion;
+    }
+
+}

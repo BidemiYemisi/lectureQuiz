@@ -1,0 +1,68 @@
+{% extends '::base.html.twig' %}
+
+
+
+{% block body %}
+    <div class="header">
+    <div class="container">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Sign In</div>
+                <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a>
+                </div>
+            </div>
+
+            <div style="padding-top:30px" class="panel-body">
+
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                {% if error %}
+                    <div>{{ error.messageKey|trans(error.messageData) }}</div>
+                {% endif %}
+
+                <form id="loginform" class="form-horizontal" role="form" action="{{ path('login_check') }}"
+                      method="post" data-parsley-validate>
+
+                    <div class="input-group">
+                        <label for="username" class="control-label">Email</label>
+                        <input type="text" id="username" name="_username" value="{{ last_username }}" required
+                               class="form-control" placeholder="username"/>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password" class="control-label">Password</label>
+                        <input input type="password" id="password" name="_password" required class="form-control"
+                               placeholder="password"/>
+                    </div>
+
+
+                    <div class="input-group">
+                        <div class="checkbox">
+                            <label>
+                                <input id="remember_me" type="checkbox" name="_remember_me"> Remember me
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div style="margin-top:10px" class="form-group">
+                        <!-- Button -->
+
+                        <div class="col-sm-12 controls">
+                            <button type="submit" class="btn btn-success">Sign in</button>
+                            <a class="btn btn-primary" href="http://localhost:8000/register" role="button">Register</a>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+        {% block customjs %}
+
+{% endblock %}

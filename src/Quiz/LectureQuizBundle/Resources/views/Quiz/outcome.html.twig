@@ -1,0 +1,65 @@
+<div class="modal fade" id="myOutcome" tabindex="-1" role="dialog" aria-labelledby="myModal"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="panel-title" style="font-family: cursive; font-size: large">New Open-ended Quiz</div>
+                    </div>
+
+                    <div style="padding-top:30px" class="panel-body">
+
+
+                        <form method="POST" action="{{ path('createquiz_outcome') }}" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="quizName">Quiz Title</label>
+                                <input type="text" class="form-control" id="quizName" required="required"
+                                       title="You must provide a quiz title"
+                                       maxlength="5000" minLength="3" name="quizName" placeholder="Enter Quiz Title">
+                            </div>
+                            <div class="form-group">
+                                <label for="question">Question</label>
+                                <textarea rows="2" cols="50" class="form-control" id="question" required="required"
+                                          title="You must enter a question" name="question"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="question">Model Answer</label>
+                                <textarea rows="2" cols="50" class="form-control" id="answer" required="required"
+                                          title="You must enter an answer" name="answer"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="picture">Upload Picture</label>
+                                <input type="file" id="name" name="name" accept="image/*">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="note">Upload Note</label>
+                                <input type="file" id="note" name="note" accept="application/pdf">
+
+                                <em>page number to insert quiz: </em>
+                                <input type="radio" name="pagenumber" value="1">Start
+                                <input type="radio" name="pagenumber" value="0">End
+                                <input type="radio" name="pagenumber" value="show" id="custom_parent2">Custom <input size="2" type="text" name="custom_pageNum" class="custom2" >
+                            </div>
+
+                            <div class="form-group">
+                            <input type="hidden" value="oc" name="type">
+                            <button type="submit" class="btn btn-warning">Create</button>
+                            <input class="btn btn-danger" type="reset" value="Reset">
+                                </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

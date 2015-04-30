@@ -1,0 +1,77 @@
+<div class="modal fade" id="myTf" tabindex="-1" role="dialog" aria-labelledby="myModal"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <div class="panel-title" style="font-family: cursive; font-size: large">New True/False Quiz</div>
+
+                    </div>
+
+                    <div style="padding-top:30px" class="panel-body">
+
+
+                        <form method="POST" action="{{ path('createquiz_tf') }}" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="quizName">Quiz Title</label>
+                                <input type="text" class="form-control" id="quizName" name="quizName"
+                                       required="required" title="You must provide a quiz title"
+                                       maxlength="5000" minLength="3" placeholder="Enter Quiz Title">
+                            </div>
+                            <div class="form-group">
+                                <label for="question">Question</label>
+                                <textarea rows="2" cols="50" class="form-control" id="question" name="question"
+                                          required="required" title="You must enter a question"></textarea>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>
+                                    <input type="radio" value="true" name="iscorrect" required="required"> True
+                                </label>
+
+                                <label style="margin-left: 50px">
+                                    <input type="radio" value="false" name="iscorrect"> False
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="picture">Upload Picture</label>
+                                <input type="file" id="name" name="name" accept="image/*">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="note">Upload Note</label>
+                                <input type="file" id="note" name="note" accept="application/pdf">
+
+                                <em>page number to insert quiz:  </em>
+                                <input type="radio" name="pagenumber" value="1">Start
+                                <input type="radio" name="pagenumber" value="0">End
+                                <input type="radio" name="pagenumber" value="show" id="custom_parent1">Custom <input size="2" type="text" name="custom_pageNum" class="custom1">
+                            </div>
+
+                            <div class="form-group">
+
+                            <input type="hidden" value="tf" name="type">
+                            <input type="hidden" value="0" name="vote">
+                            <button type="submit" class="btn btn-warning">Create</button>
+
+                            <input class="btn btn-danger" type="reset" value="Reset">
+                                </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,363 @@
+<?php
+
+namespace Quiz\LectureQuizBundle\Entity;
+
+use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints\DateTime;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
+/**
+ * User
+ *
+ * @ORM\Table(name="user")
+ * @ORM\Entity
+ * @UniqueEntity(fields="email", message="Username already taken")
+ * @UniqueEntity(fields="username", message="Email already taken")
+ */
+class User implements UserInterface
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=225, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Email(message = "The email '{{ value }}' is not a valid email.",
+     *     checkMX = true)
+     */
+    private $username;
+
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(min=6, max= 500)
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z -]+$/",
+     *     match=true,
+     *     message="Your name cannot contain a number or special character"
+     * )
+     * @ORM\Column(name="fullname", type="string", length=225, nullable=false)
+     */
+    private $fullname;
+
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(min=6, max= 500)
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z -]+$/",
+     *     match=true,
+     *     message="Your username cannot contain a number or special character"
+     * )
+     * @ORM\Column(name="email", type="string", length=225, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(min=8 , max = 4096)
+     * @Assert\Regex(
+     *     pattern="/^.*(?=.{8,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$/",
+     *     match=true,
+     *     message=" Must contain atleast one digit,lowercase and uppercase letters"
+     * )
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="time_created", type="datetime", nullable=false)
+     */
+    private $timeCreated;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_login", type="datetime", nullable=false)
+     */
+    private $lastLogin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Quiz" , mappedBy ="user")
+     * @ORM\JoinColumn(name="quiz_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $quizzes;
+
+
+
+    public function __construct(){
+        $this->quizzes = new ArrayCollection();
+        $this->setLastLogin(new \DateTime);
+        $this->setTimeCreated(new \DateTime);
+
+
+
+    }
+
+    public function __toString(){  //get email of user which is username in this case
+        return $this->email;
+    }
+
+
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     * @return User
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string 
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * Set fullname
+     *
+     * @param string $fullname
+     * @return User
+     */
+    public function setFullname($fullname)
+    {
+        $this->fullname = $fullname;
+
+        return $this;
+    }
+
+    /**
+     * Get fullname
+     *
+     * @return string 
+     */
+    public function getFullname()
+    {
+        return $this->fullname;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return User
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        //hash password
+        $this->password = password_hash($password,PASSWORD_BCRYPT);
+
+        return $this;
+
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    //returns null because hashing of password will be handled using bcrpyt
+    public function getSalt(){
+        return null;
+    }
+
+    //returns an array of roles assigned to the user which is ROLE_USER by default
+    //it determines which portion of the site a user can access
+    //admin can manage all resources while user can manage their account only
+    public function getRoles(){
+     return array('ROLE_USER');
+    }
+
+    //use by symfony to erase sensitive information
+    //about a user
+    public function eraseCredentials(){
+
+    }
+
+
+    /**
+     * Get timeCreated
+     *
+     * @return \DateTime
+     */
+    public function getTimeCreated()
+    {
+        return $this->timeCreated;
+    }
+
+
+
+    /**
+     * Set timeCreated
+     *
+     * @param \DateTime $timeCreated
+     * @return User
+     */
+    public function setTimeCreated($timeCreated)
+    {
+
+        $this->timeCreated = $timeCreated;
+        return $this;
+
+    }
+
+    /**
+     * Get lastLogin
+     *
+     * @return \DateTime
+     */
+    public function getLastLogin()
+    {
+        return $this->lastLogin;
+    }
+
+    /**
+     * Set lastLogin
+     *
+     * @param \DateTime $lastLogin
+     * @return User
+     */
+    public function setLastLogin($lastLogin)
+    {
+        $this->lastLogin = $lastLogin;
+        return $this;
+
+    }
+
+    /**
+     * @ORM\preUpdate
+     */
+    public function setLastLoginValue()
+    {
+        $this->setLastLogin(new \DateTime());
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * Add quizzes
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\Quiz $quizzes
+     * @return User
+     */
+    public function addQuiz(\Quiz\LectureQuizBundle\Entity\Quiz $quizzes)
+    {
+        $this->quizzes[] = $quizzes;
+
+        return $this;
+    }
+
+    /**
+     * Remove quizzes
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\Quiz $quizzes
+     */
+    public function removeQuiz(\Quiz\LectureQuizBundle\Entity\Quiz $quizzes)
+    {
+        $this->quizzes->removeElement($quizzes);
+    }
+
+    /**
+     * Get quizzes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getQuizzes()
+    {
+        return $this->quizzes;
+    }
+
+
+    /**
+     * @var string
+     */
+    private $pdfUpload;
+
+
+    /**
+     * Set pdfUpload
+     *
+     * @param string $pdfUpload
+     * @return User
+     */
+    public function setPdfUpload($pdfUpload)
+    {
+        $this->pdfUpload = $pdfUpload;
+
+        return $this;
+    }
+
+    /**
+     * Get pdfUpload
+     *
+     * @return string 
+     */
+    public function getPdfUpload()
+    {
+        return $this->pdfUpload;
+    }
+}

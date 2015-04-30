@@ -1,0 +1,76 @@
+{% extends '::base.html.twig' %}
+
+   {% block stylesheets %}
+
+       <!-- Custom styles for this template -->
+       <link href="{{ asset('styles/main.css') }}" type="text/css" rel="stylesheet"/>
+       <!-- Bootstrap core CSS -->
+       <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"
+             media="screen"/>
+       <!-- Bootstrap theme -->
+       <link href="{{asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" />
+
+
+
+   {% endblock %}
+
+
+{% block body %}
+
+    <div class="header">
+        <div class="container" style="margin-top: 200px ">
+            <div class="row centered">
+                <div class="col-md-12">
+
+
+                    {% for res in result %}
+
+
+                        <strong style="font-size: large">{{ res.answer }}</strong>
+                        <span class="pull-right" answer="{{ loop.index0 }}"> </span>
+
+
+                        <div class="progress" style=" height: 39px; border-radius: 23px;">
+                            <p vote="{{ loop.index0 }}"
+                               class="progress-bar progress-bar-success progress-bar-striped active"
+                               role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                               style="width:{{ res.vote }}%; ">
+
+                            </p>
+                        </div>
+
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+  {% block javascripts %}
+
+      <!-- Bootstrap core JavaScript-->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="{{ asset('js/jquery.js') }}"></script>
+      <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+
+      <script type="text/javascript">
+
+          var es = new EventSource("{{ path('current_result_graded',{quizid:id}) }}");
+          es.addEventListener("message", function (e) {
+              arr = JSON.parse(e.data);
+
+              for (x in arr) {
+
+                  // $('p[vote="' + x + '"]').css("width", arr[x].vote );
+                  $('p[vote="' + x + '"]').css("width", arr[x].vote + "%");
+
+                  $('[answer="' + x + '"]').html(arr[x].vote);
+
+
+              }
+          }, false);
+      </script>
+
+  {% endblock %}

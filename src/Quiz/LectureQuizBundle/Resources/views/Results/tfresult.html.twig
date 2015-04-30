@@ -1,0 +1,64 @@
+
+
+
+
+{% block body %}
+
+
+
+
+
+
+
+
+
+
+
+                    {% for res in result %}
+
+                        <strong style="font-size: large">{{ res.answer }}</strong>
+                        <span class="pull-right" tfanswer="{{ loop.index0 }}"> </span>
+
+
+                        <div class="progress" style=" height: 39px; border-radius: 23px;">
+                            <p tfvote="{{ loop.index0 }}"
+                               class="progress-bar progress-bar-success progress-bar-striped active"
+                               role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                               style="width:{{ res.vote }}%; ">
+
+                            </p>
+                        </div>
+
+
+                    {% endfor %}
+
+
+
+
+{% block javascripts %}
+
+    <script type="text/javascript">
+
+        var es = new EventSource("{{ path('current_result_tf',{qid:id}) }}");
+        es.addEventListener("message", function (e) {
+            arr = JSON.parse(e.data);
+
+            for (x in arr) {
+
+                $('p[tfvote="' + x + '"]').css("width", arr[x].vote + "%");
+
+                $('[tfanswer="' + x + '"]').html(arr[x].vote);
+
+
+            }
+        }, false);
+    </script>
+
+    {% endblock %}
+
+
+
+
+
+
+{% endblock %}

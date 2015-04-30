@@ -1,0 +1,297 @@
+<?php
+
+namespace Quiz\LectureQuizBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+/**
+ * GradedQuestion
+ *
+ * @ORM\Table(name="graded_question", indexes={@ORM\Index(name="fk_graded_question_quiz1_idx", columns={"quiz_id"})})
+ * @ORM\Entity
+ */
+class GradedQuestion
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="question", type="text", nullable=false)
+     */
+    private $question;
+
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \Quiz\LectureQuizBundle\Entity\Quiz
+     *
+     * @ORM\ManyToOne(targetEntity="Quiz\LectureQuizBundle\Entity\Quiz", inversedBy ="graded_question")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="quiz_id", referencedColumnName="id")
+     * })
+     */
+    private $quiz;
+
+
+    /**
+     * @ORM\OneToOne(targetEntity="Photo" , mappedBy ="gradedQuestion")
+     * @ORM\JoinColumn(name="photo_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $photo;
+
+
+
+    /**
+     * @var string
+     * @ORM\Column(name="picture", nullable=false)
+     * @Assert\Image(
+     *     minWidth = 200,
+     *     maxWidth = 400,
+     *     minHeight = 200,
+     *     maxHeight = 400
+     * )
+     * @Assert\File(maxSize="6000000")
+     */
+    private $picture;
+
+    /**
+     * @ORM\OneToOne(targetEntity="GradedAnswer" , mappedBy ="gradedQuestion")
+     * @ORM\JoinColumn(name="graded_answer_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $graded_answer;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="TakersAnswer" , mappedBy ="gradedQuestion")
+     * @ORM\JoinColumn(name="takers_answer_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $takers_answer;
+
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    public $path;
+
+
+    public function __construct(){
+       // $this->graded_answer = new ArrayCollection();
+        $this->takers_answer= new ArrayCollection();
+    }
+
+    public function __toString(){  //get question
+        return $this->question;
+    }
+
+
+
+    /**
+     * Set question
+     *
+     * @param string $question
+     * @return GradedQuestion
+     */
+    public function setQuestion($question)
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    /**
+     * Get question
+     *
+     * @return string 
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+
+    /**
+     * Set graded_answer
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\GradedAnswer $graded_answer
+     * @return GradedQuestion
+     */
+    public function setGradedAnswer(GradedAnswer $graded_answer)
+    {
+        $this->graded_answer = $graded_answer;
+
+        return $this;
+    }
+
+    /**
+     * Get graded_answer
+     *
+     * @return \Quiz\LectureQuizBundle\Entity\GradedAnswer
+     */
+    public function getGradedAnswer()
+    {
+        return $this->graded_answer;
+    }
+
+
+
+
+ 
+
+    /**
+     * Set quiz
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\Quiz $quiz
+     * @return GradedQuestion
+     */
+    public function setQuiz(\Quiz\LectureQuizBundle\Entity\Quiz $quiz = null)
+    {
+        $this->quiz = $quiz;
+
+        return $this;
+    }
+
+    /**
+     * Get quiz
+     *
+     * @return \Quiz\LectureQuizBundle\Entity\Quiz 
+     */
+    public function getQuiz()
+    {
+        return $this->quiz;
+    }
+
+
+    /**
+     * Add takers_answer
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\TakersAnswer $takers_answer
+     * @return GradedQuestion
+     */
+    public function addTakersAnswer(TakersAnswer $takers_answer)
+    {
+        $this->takers_answer[] = $takers_answer;
+
+        return $this;
+    }
+
+    /**
+     * Remove takers_answer
+     *
+     * @param \Quiz\LectureQuizBundle\Entity\TakersAnswer $takers_answer
+     */
+    public function removeTakersAnswer(TakersAnswer $takers_answer)
+    {
+        $this->takers_answer->removeElement($takers_answer);
+    }
+
+    /**
+     * Get takers_answer
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getTakersAnswers()
+    {
+        return $this->takers_answer;
+    }
+
+
+    /**
+     * Set picture
+     *
+     * @param UploadedFile $picture
+     * @return GradedQuestion
+     */
+    public function setPicture(UploadedFile $picture=null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return UploadedFile
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+
+
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path ? null : $this->getUploadRootDir().'/'.$this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path
+            ? null
+            : $this->getUploadDir().'/'.$this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // the absolute directory path where uploaded
+        // documents should be saved
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // get rid of the __DIR__ so it doesn't screw up
+        // when displaying uploaded doc/image in the view.
+        return 'uploads/documents';
+    }
+
+    public function upload()
+    {
+        // the file property can be empty if the field is not required
+        if (null === $this->getPicture()) {
+            return;
+        }
+
+        // use the original file name here but you should
+        // sanitize it at least to avoid any security issues
+
+        // move takes the target directory and then the
+        // target filename to move to
+        $this->getPicture()->move(
+            $this->getUploadRootDir(),
+            $this->getPicture()->getClientOriginalName()
+        );
+
+        // set the path property to the filename where you've saved the file
+        $this->path = $this->getPicture()->getClientOriginalName();
+
+        // clean up the file property as you won't need it anymore
+        $this->picture = null;
+    }
+
+}

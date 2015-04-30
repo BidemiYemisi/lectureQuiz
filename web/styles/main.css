@@ -1,0 +1,103 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: FLATTY - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* to shift the header down form the navigation menu*/
+.header {
+    margin-top: 70px;
+}
+
+
+.centered {
+    text-align: center;
+}
+
+
+/* HeaderWrap */
+#headerwrap {
+    /* background: url(../img/bg01.jpg) no-repeat center top; */
+    background-color: #3498db;
+    margin-top: -20px;
+    padding-top: 200px;
+    background-attachment: fixed; /*relative*/
+    background-position: center center;
+    min-height: 650px;
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 45px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+
+
+    /*......................PROFILE PAGE STYLE BY LYNX................................ */
+    /*...............URL: http://bootsnipp.com/snippets/featured/simple-user-profile................................ */
+    .user-row {
+        margin-bottom: 14px;
+    }
+
+    .user-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .dropdown-user {
+        margin: 13px 0;
+        padding: 5px;
+        height: 100%;
+    }
+
+    .dropdown-user:hover {
+        cursor: pointer;
+    }
+
+    .table-user-information > tbody > tr {
+        border-top: 1px solid rgb(221, 221, 221);
+    }
+
+    .table-user-information > tbody > tr:first-child {
+        border-top: 0;
+    }
+
+    .table-user-information > tbody > tr > td {
+        border-top: 0;
+    }
+
+    .toppad {
+        margin-top: 20px;
+    }
+
+
+

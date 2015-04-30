@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Quiz\LectureQuizBundle\Entity\TakersAnswer" table="takers_answer">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="answercode" type="string" column="answercode" length="45" nullable="false"/>
+    <field name="outcomeQuestionId" type="integer" column="outcome_question_id" nullable="false"/>
+    <field name="quizId" type="integer" column="quiz_id" nullable="false"/>
+  </entity>
+</doctrine-mapping>

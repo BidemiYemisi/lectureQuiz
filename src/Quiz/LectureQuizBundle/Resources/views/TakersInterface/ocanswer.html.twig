@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col">
+                    <hr>
+                    <div class="text-center">
+                       <h2> Enter Answer</h2>
+                    </div>
+
+                    <hr>
+
+                    </div>
+                </div>
+                <div class="row centered">
+                <div class="col-md-12">
+                    <form action="{{ path('outcome_takers_answer') }}" method="POST" >
+
+
+
+                        <div class="form-group">
+                            <textarea cols="50" rows="5" placeholder="Please enter your answer"
+                                      name="answercode"></textarea>
+                        </div>
+
+                        <input type="hidden" value="{{ quizId }}" name="quizId">
+
+                        <button class="btn btn-warning btn-lg" type="submit" value="{{ questionId }}" name="questionId">Submit Answer</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

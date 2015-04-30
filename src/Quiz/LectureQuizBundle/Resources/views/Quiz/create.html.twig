@@ -1,0 +1,84 @@
+{% extends'::base.html.twig' %}
+
+
+
+{% block stylesheets %}
+    <!-- Included templates -->
+
+    {% include 'QuizLectureQuizBundle:Quiz:graded.html.twig' %}
+    {% include 'QuizLectureQuizBundle:Quiz:tfquestion.html.twig' %}
+    {% include 'QuizLectureQuizBundle:Quiz:outcome.html.twig' %}
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('styles/main.css') }}" type="text/css" rel="stylesheet"/>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+    <div class="header"></div>
+    <div class="container">
+        <div class="row" style="margin-top: 50px">
+            <div class="col-sm-3 col-md-3">
+
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><span class="glyphicon glyphicon-th"></span><b>
+                                    Welcome {{ user }} </b>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default ">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a href="#myGraded" data-toggle="modal"><span
+                                            class="glyphicon glyphicon-triangle-right"></span> Multiple-choice Question</a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a href="#myOutcome" data-toggle="modal"><span
+                                            class="glyphicon glyphicon-triangle-right"></span>
+                                    Open-ended Question </a></h4>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><a href="#myTf" data-toggle="modal"><span
+                                            class="glyphicon glyphicon-triangle-right"></span>True/False Question</a>
+                            </h4>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div id="main-content" class="col-sm-9 col-md-9">
+
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/field.js') }}"></script>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,42 @@
+{% extends'::base.html.twig' %}
+
+{% block header %}
+{% endblock %}
+
+
+{% block body %}
+    <div class="header">
+
+
+        <div class="container">
+
+            <hr/>
+
+            <div class="row">
+                <h1 class="centered"> Select Answer</h1>
+
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <form action="{{ path('process_form') }}" method="POST">
+                    <ul class="thumbnails list-unstyled">
+                        {% for ans in answer %}
+                            <li class="col-md-3">
+                                <button class="btn btn-lg" style="background: {{ ans.color }}; height: 200px; width: 200px;"
+                                        type="submit" value="{{ ans.id }}" name="vote">
+                                    <div class="text-uppercase text-center" style="font-size: 100px; color: #f8f8f8"> {{ ans.letter }}</div>
+                                </button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
