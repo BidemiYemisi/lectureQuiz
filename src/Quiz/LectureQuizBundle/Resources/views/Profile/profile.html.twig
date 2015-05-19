@@ -1,5 +1,8 @@
 {% extends'::base.html.twig' %}
 
+
+
+
 {% block stylesheets %}
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojo/dojo.js" data-dojo-config="async: true"></script>
     <!-- Custom styles for this template -->
@@ -17,43 +20,60 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 
+
 {% endblock %}
 
 
 
 {% block body %}
 
+<!-- Some HTML codes by Anon -Bootstrap v.2.3.2. portfolio/products category example - from http://www.bootply.com/dkEQmm8zJC-->
+<!-- Some HTML codes by Lynx -"Simple User Profile " - from http://bootsnipp.com/snippets/featured/simple-user-profile-->
+
 
     <div class="header">
         <div class="container">
             <div class="row" style="margin-top: 20px">
 
-                <div class="col-xs-6 col-sm-6 toppad">
+                <div class="col-xs-3 col-sm-3 toppad">
 
 
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <h3 class="panel-title" style="font-family: cursive; font-size: large">Great to have you
-                                back!</h3>
+                            <h3 class="panel-title" style="font-family: cursive; font-size: large">Multichoice Quiz Stat</h3>
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div id="profileImage" class="col-md-3 col-lg-3 " align="center">Profile</div>
 
-                                <div class=" col-md-9 col-lg-9 " id="profileSpace">
-                                    <table class="table table-user-information">
-                                        <tbody>
-                                        <tr>
-                                            <td>Fulname:</td>
-                                            <td>{{ entity.fullname }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Email:</td>
-                                            <td>{{ entity.username }}</td>
-                                        </tr>
 
-                                        </tbody>
-                                    </table>
+                                <div class=" col-md-12 col-lg-12 ">
+
+			                       <p id="pie_chart1" style="width: 200px; height: 190px;"></p>
+                                   <p style="width: 10px; height: 10px; background:  #F62817;"></p>Correct Answers
+                                   <p style="width: 10px; height: 10px; background:  #16E2F5;"></p>Incorrect Answers
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="panel-footer"></div>-->
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 toppad">
+
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" style="font-family: cursive; font-size: large">True/False Quiz Stat </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+
+
+                                <div class=" col-md-12 col-lg-12 ">
+                                    <p id="pie_chart2" style="width: 200px; height: 190px;"></p>
+                                    <p style="width: 10px; height: 10px; background:  #16E2F5;"></p>Correct Answers
+                                    <p style="width: 10px; height: 10px; background:  #F62817;"></p>Incorrect Answers
 
                                 </div>
                             </div>
@@ -65,14 +85,14 @@
                 <div class="col-xs-6 col-sm-6 toppad">
                     <div class="panel panel-warning">
                         <div class="panel-heading">
-                            <h3 class="panel-title" style="font-family: cursive; font-size: large">Here is your
-                                work!</h3>
+                            <h3 class="panel-title" style="font-family: cursive; font-size: large">{{ entity.fullname }}: Great to have you
+                                back! </h3>
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div id="profileImage" class="col-md-3 col-lg-3 " align="center">Activity</div>
+                                <div  class="col-md-3 col-lg-3 " align="center">Activity</div>
 
-                                <div class=" col-md-9 col-lg-9 " id="profileSpace">
+                                <div class=" col-md-9 col-lg-9 ">
                                     <table class="table table-user-information">
                                         <tbody>
                                         <tr>
@@ -81,7 +101,7 @@
                                         <tr>
 
 
-                                            <td id="column_chart" style="width: 500px; height: 250px;">
+                                            <td id="column_chart" style="width: 400px; height: 200px;">
 
                                             </td>
                                         </tr>
@@ -90,11 +110,15 @@
                                     </table>
 
                                 </div>
+
                             </div>
                         </div>
                         <!--<div class="panel-footer"></div>-->
                     </div>
                 </div>
+            </div>
+
+
             </div>
 
             <hr/>
@@ -110,38 +134,61 @@
                     {% for quizgd in quizGd %}
 
 
-                        <li class="col-md-3">
-                            <div class="thumbnail" style="padding: 0">
+    <li class="col-md-3">
+        <div class="thumbnail" style="padding: 0">
 
-                                <div class="caption">
+            <div class="caption">
 
-                                    <p><span class="glyphicon glyphicon-blackboard"> </span> {{ quizgd.quizName|slice(0,25) }}</p>
+                <p>
+                    <span class="glyphicon glyphicon-blackboard"> </span> {{ quizgd.quizName|slice(0,25) }}
+                </p>
 
 
-                                    <p><span class="glyphicon glyphicon-book"> </span> {{ quizgd.question|slice(0,25) }}
-                                        ...</p>
+                <p><span class="glyphicon glyphicon-book"> </span> {{ quizgd.question|slice(0,25) }}
+                    ...</p>
 
-                                </div>
-                                <div class="modal-footer" style="text-align: left">
+            </div>
+            <div class="modal-footer" style="text-align: left">
 
-                                    <div class="row">
-                                        <div class="col-md-3" title="view"><a
-                                                    href="{{ path('profile_graded',{id:quizgd.id}) }}"><span
-                                                        class="glyphicon  glyphicon-eye-open"></span></a></div>
-                                        <div class="col-md-3" title="edit"><a
-                                                    href="#myModal{{ quizgd.id }}" data-toggle="modal"><span
-                                                        class="glyphicon  glyphicon-pencil"></span></a></div>
-                                        <div class="col-md-3" title="delete"><a
-                                                    href="{{ path ('quiz_delete',{id:quizgd.id}) }}"><span
-                                                        class="glyphicon  glyphicon-trash"></span></a></div>
-                                        <div class="col-md-3" title="stats"><a
-                                                    href="{{ path ('result_graded',{id:quizgd.id}) }}"><span
-                                                        class="glyphicon glyphicon-signal"></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
+                <div class="row">
+                    <div class="col-md-3" title="view"><a
+                                href="{{ path('profile_graded',{id:quizgd.id}) }}" class="btn"><span
+                                    class="glyphicon  glyphicon-eye-open"></span></a></div>
+                    <div class="col-md-3" title="edit"><a
+                                href="{{ path('graded_edit',{id:quizgd.id}) }}" class="btn"><span
+                                    class="glyphicon  glyphicon-pencil"></span></a></div>
+                    <div class="col-md-3" title="delete"><a
+                                href="{{ path ('quiz_delete',{id:quizgd.id}) }}" class="btn"><span
+                                    class="glyphicon  glyphicon-trash"></span></a></div>
+                    <div class="col-md-3" title="stats">
+                        <a data-toggle="modal" data-target="#gdResult{{ quizgd.id }}"
+                           href="{{ path ('result_graded',{id:quizgd.id}) }}" class="btn"><span
+                                    class="glyphicon glyphicon-signal"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <div class="modal fade" id="gdResult{{ quizgd.id }}" tabindex="-1" role="dialog"
+         aria-labelledby="gdResult"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><b>Loading result......</b></h4>
+                </div>
+                <div class="modal-body ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endfor %}
                 </ul>
             </div>
 
@@ -152,37 +199,59 @@
                     {% for quizoc in quizOc %}
 
 
-                        <li class="col-md-3">
-                            <div class="thumbnail" style="padding: 0">
+    <li class="col-md-3">
+        <div class="thumbnail" style="padding: 0">
 
-                                <div class="caption">
+            <div class="caption">
 
-                                    <p><span class="glyphicon glyphicon-blackboard"> </span> {{ quizoc.quizName|slice(0,25) }}</p>
+                <p>
+                    <span class="glyphicon glyphicon-blackboard"> </span> {{ quizoc.quizName|slice(0,25) }}
+                </p>
 
 
-                                    <p><span class="glyphicon glyphicon-book"></span> {{ quizoc.question|slice(0,25) }}
-                                        ...</p>
+                <p><span class="glyphicon glyphicon-book"></span> {{ quizoc.question|slice(0,25) }}
+                    ...</p>
 
-                                </div>
-                                <div class="modal-footer" style="text-align: left">
+            </div>
+            <div class="modal-footer" style="text-align: left">
 
-                                    <div class="row">
-                                        <div class="col-md-3" title="view"><a
-                                                    href="{{ path('profile_outcome',{id:quizoc.id}) }}"><span
-                                                        class="glyphicon  glyphicon-eye-open"></span></a></div>
-                                        <div class="col-md-3" title="edit"><a
-                                                    href="#myModal{{ quizoc.id }}" data-toggle="modal"><span
-                                                        class="glyphicon  glyphicon-pencil"></span></a></div>
-                                        <div class="col-md-3" title="delete"><a
-                                                    href="{{ path ('quiz_delete',{id:quizoc.id}) }}"><span
-                                                        class="glyphicon glyphicon-trash"></span></a></div>
-                                        <div class="col-md-3" title="stats"><a
-                                                    href="{{ path ('result_oc',{id:quizoc.id}) }}"><span class="glyphicon glyphicon-signal"></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
+                <div class="row">
+                    <div class="col-md-3" title="view"><a
+                                href="{{ path('profile_outcome',{id:quizoc.id}) }}"
+                                class="btn"><span
+                                    class="glyphicon  glyphicon-eye-open"></span></a></div>
+                    <div class="col-md-3" title="edit"><a
+                                href="{{ path('oc_edit',{id:quizoc.id}) }}" class="btn"><span
+                                    class="glyphicon  glyphicon-pencil"></span></a></div>
+                    <div class="col-md-3" title="delete"><a
+                                href="{{ path ('quiz_delete',{id:quizoc.id}) }}" class="btn"><span
+                                    class="glyphicon glyphicon-trash"></span></a></div>
+                    <div class="col-md-3" title="stats"><a
+                                data-toggle="modal" data-target="#ocResult{{ quizoc.id }}"
+                                class="btn" href="{{ path ('result_oc',{id:quizoc.id}) }}">
+                            <span class="glyphicon glyphicon-signal"></span></a></div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <div class="modal fade" id="ocResult{{ quizoc.id }}" tabindex="-1" role="dialog"
+         aria-labelledby="ocResult"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><b>Loading result......</b></h4>
+                </div>
+                <div class="modal-body ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
                 </ul>
 
             </div>
@@ -194,39 +263,59 @@
                     {% for quiztf in quizTf %}
 
 
-                        <li class="col-md-3">
-                            <div class="thumbnail" style="padding: 0">
+    <li class="col-md-3">
+        <div class="thumbnail" style="padding: 0">
 
-                                <div class="caption">
+            <div class="caption">
 
-                                    <p><span class="glyphicon glyphicon-blackboard"></span> {{ quiztf.quizName|slice(0,25) }}</p>
-
-
-                                    <p><span class="glyphicon glyphicon-book"></span> {{ quiztf.question|slice(0,25) }}
-                                        ...</p>
-
-                                </div>
-                                <div class="modal-footer" style="text-align: left">
-
-                                    <div class="row">
-                                        <div class="col-md-3" title="view"><a class="btn"
-                                                    href="{{ path('profile_tf',{id:quiztf.id}) }}"><span
-                                                        class="glyphicon  glyphicon-eye-open"></span></a></div>
-                                        <div class="col-md-3" title="edit"><a class="btn" href="#myModal{{ quiztf.id }}"
-                                                                              data-toggle="modal"><span
-                                                        class="glyphicon  glyphicon-pencil"></span></a></div>
-                                        <div class="col-md-3" title="delete"><a class="btn"
-                                                    href="{{ path ('quiz_delete',{id:quiztf.id}) }}"><span
-                                                        class="glyphicon  glyphicon-trash"></span></a></div>
-                                        <div class="col-md-3" title="stats"><a data-toggle="modal" data-target="#tfResult{{ quiztf.id }}" class="btn"><span
-                                                        class="glyphicon glyphicon-signal"></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                <p>
+                    <span class="glyphicon glyphicon-blackboard"></span> {{ quiztf.quizName|slice(0,25) }}
+                </p>
 
 
-                    {% endfor %}
+                <p><span class="glyphicon glyphicon-book"></span> {{ quiztf.question|slice(0,25) }}
+                    ...</p>
+
+            </div>
+            <div class="modal-footer" style="text-align: left">
+
+                <div class="row">
+                    <div class="col-md-3" title="view"><a class="btn"
+                                                          href="{{ path('profile_tf',{id:quiztf.id}) }}"><span
+                                    class="glyphicon  glyphicon-eye-open"></span></a></div>
+                    <div class="col-md-3" title="edit"><a
+                                href="{{ path('tf_edit',{id:quiztf.id}) }}" class="btn"><span
+                                    class="glyphicon  glyphicon-pencil"></span></a></div>
+                    <div class="col-md-3" title="delete"><a class="btn"
+                                                            href="{{ path ('quiz_delete',{id:quiztf.id}) }}"><span
+                                    class="glyphicon  glyphicon-trash"></span></a></div>
+                    <div class="col-md-3" title="stats"><a data-toggle="modal"
+                                                           data-target="#tfResult{{ quiztf.id }}"
+                                                           href="{{ path ('result_tf',{id:quiztf.id}) }}"
+                                                           class="btn"><span
+                                    class="glyphicon glyphicon-signal"></span></a></div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+    <div class="modal fade" id="tfResult{{ quiztf.id }}" tabindex="-1" role="dialog"
+         aria-labelledby="tfResult"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><b>Loading result......</b></h4>
+                </div>
+                <div class="modal-body ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
                 </ul>
 
             </div>
@@ -234,244 +323,7 @@
 
         </div>
 
-
-        <!-- Button HTML (to Trigger Graded Question Modal) -->
-
-        {% for quizgd in quizGd %}
-            <!-- Modal HTML -->
-            <div class="modal fade" id="myModal{{ quizgd.id }}" tabindex="-1" role="dialog" aria-labelledby="myModal"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"><b>Edit Quiz</b></h4>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST" action="">
-                                <div class="form-group">
-                                    <label for="quizName">Quiz Title</label>
-                                    <input type="text" class="form-control" id="quizName" name="quizName"
-                                           required="required" title="You must provide a quiz title"
-                                           maxlength="5000" minLength="3" placeholder="Enter Quiz Title">
-                                </div>
-                                <div class="form-group">
-                                    <label for="question">Question</label>
-                                    <textarea rows="4" cols="50" class="form-control" id="question" name="question"
-                                              title="You must enter a question" required="required"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="photo">Picture</label>
-                                    <input type="file" id="name" name="name">
-
-                                    <p class="help-block">Only picture format</p>
-                                </div>
-
-                                <p>
-
-                                <div class="form-group">
-                                    <label for="answer1">First Answer</label>
-                                    <input type="text" class="form-control" id="answer1" name="answer1"
-                                           required="required" title="Please enter an answer option"
-                                           placeholder="Enter First Answer">
-                                    <label>
-                                        <input type="radio" value="answer1" name="iscorrect"> Correct
-                                    </label>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="answer2">Second Answer</label>
-                                    <input type="text" class="form-control" id="answer2" name="answer2"
-                                           required="required" title="Please enter an answer option"
-                                           placeholder="Enter Second Answer">
-                                    <label>
-                                        <input type="radio" value="answer2" name="iscorrect" required="required"
-                                               title="Please select a correct answer choice"> Correct
-                                    </label>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="answer3">Third Answer</label>
-                                    <input type="text" class="form-control" id="answer3" name="answer3"
-                                           placeholder="Enter Third Answer">
-                                    <label>
-                                        <input type="radio" value="answer3" name="iscorrect"> Correct
-                                    </label>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="answer4">Fourth Answer</label>
-                                    <input type="text" class="form-control" id="answer4" name="answer4"
-                                           placeholder="Enter Fourth Answer">
-                                    <label>
-                                        <input type="radio" value="answer4" name="iscorrect"> Correct
-                                    </label>
-                                </div>
-                                </p>
-                                <input type="hidden" value="gd" name="type">
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-warning">Save changes</button>
-                                </div>
-                            </form>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        {% endfor %}
-
-        <!-- Button HTML (to Trigger True/False Question Modal) -->
-
-        {% for quiztf in quizTf %}
-            <!-- Modal HTML -->
-            <div class="modal fade" id="myModal{{ quiztf.id }}" tabindex="-1" role="dialog" aria-labelledby="myModal"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"><b>Edit Quiz</b></h4>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST" action="">
-                                <div class="form-group">
-                                    <label for="quizName">Quiz Title</label>
-                                    <input type="text" class="form-control" id="quizName" name="quizName"
-                                           required="required" title="You must provide a quiz title"
-                                           maxlength="5000" minLength="3" placeholder="Enter Quiz Title">
-                                </div>
-                                <div class="form-group">
-                                    <label for="question">Question</label>
-                                    <textarea rows="4" cols="50" class="form-control" id="question" name="question"
-                                              required="required" title="You must enter a question"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="picture">Picture</label>
-                                    <input type="file" id="name" name="name">
-
-                                    <p class="help-block">Only picture format</p>
-                                </div>
-
-                                <p>
-
-                                <div class="form-group">
-                                    <label>
-                                        <input type="radio" value="true" name="iscorrect" required="required"> True
-                                    </label>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>
-                                        <input type="radio" value="false" name="iscorrect"> False
-                                    </label>
-                                </div>
-                                </p>
-
-                                <input type="hidden" value="tf" name="type">
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-warning">Save changes</button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        {% endfor %}
-
-        <!-- Button HTML (to Trigger Outcome Question Modal) -->
-
-        {% for quizoc in quizOc %}
-            <!-- Modal HTML -->
-            <div class="modal fade" id="myModal{{ quizoc.id }}" tabindex="-1" role="dialog" aria-labelledby="myModal"
-                 aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title"><b>Edit Quiz</b></h4>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST" action="">
-                                <div class="form-group">
-                                    <label for="quizName">Quiz Title</label>
-                                    <input type="text" class="form-control" id="quizName" required="required"
-                                           title="You must provide a quiz title"
-                                           maxlength="5000" minLength="3" name="quizName"
-                                           placeholder="Enter Quiz Title">
-                                </div>
-                                <div class="form-group">
-                                    <label for="question">Question</label>
-                                    <textarea rows="4" cols="50" class="form-control" id="question" required="required"
-                                              title="You must enter a question" name="question"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="question">Model Answer</label>
-                                    <textarea rows="4" cols="50" class="form-control" id="answer" required="required"
-                                              title="You must enter an answer" name="answer"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="picture">Picture</label>
-                                    <input type="file" id="name" name="name">
-
-                                    <p class="help-block">Only picture format</p>
-                                </div>
-                                <input type="hidden" value="oc" name="type">
-
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-warning">Save changes</button>
-                                </div>
-                            </form>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        {% endfor %}
-
-
-
-
-        <!-- Button HTML (to Trigger True/False Result Modal) -->
-        {% for quiztf in quizTf %}
-
-        <div class="modal fade" id="tfResult{{ quiztf.id }}" tabindex="-1" role="dialog" aria-labelledby="tfResult"
-             aria-hidden="true" data-remote="{{ path ('result_tf',{id:quiztf.id}) }}">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title"><b>Loading result......</b></h4>
-                    </div>
-                    <div class="modal-body"></div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        {% endfor %}
     </div>
-
-    <script>
-
-        $("#tfResult162").on('hidden.bs.modal', function() {
-            $(this).removeData('bs.modal');
-        });
-
-    </script>
 
 
 
@@ -486,8 +338,9 @@
                     //    We want to use Markers
                     "dojox/charting/plot2d/Markers",
                     "dojo/domReady!"
+
                 ],
-                function (Chart, Colunms, theme, Highlight) {
+                function(Chart, Colunms, theme, Highlight) {
 
                     // Define the data
                     var chartData = [{{ apr }}, {{ aug }}, {{ dec }}];
@@ -508,27 +361,72 @@
                     chart.setTheme(theme);
                     chart.render();
                 });
+        require([
+                    "dojox/charting/Chart",
+                    "dojox/charting/plot2d/Pie",
+                    "dojox/charting/action2d/MoveSlice",
+                    "dojox/charting/themes/MiamiNice",
+                    "dojox/charting/axis2d/Default",
+                    "dojox/charting/action2d/Tooltip",
+                    "dojox/charting/action2d/Magnify",
+                    "dojo/domReady!"
+                ],
+        function gradedChart  (Chart, Default, Pie, theme, MoveSlice,Tooltip) {
+            var chart = new Chart("pie_chart1");
+            chart.addPlot("default", {type: "Pie",radius: 80});
+
+            chart.addSeries("Series A", [
+                {y: {{ attribute(gdStat, 1) }},color:"#F62817",fontColor:"white"},
+                {y: {{ attribute(gdStat, 0) }},color:"#16E2F5", fontColor:"white"}
+
+            ]);
+
+            // Create the tooltip
+            var tip = new dojox.charting.action2d.Tooltip(chart,"default");
+            var mag1 = new dojox.charting.action2d.MoveSlice(chart, "default");
+
+
+
+            // Create the magnifier
+           // var mag = new Magnify(chart,"default");
+            chart.setTheme(theme);
+            chart.render();
+        });
+
+        require([
+                    "dojox/charting/Chart",
+                    "dojox/charting/plot2d/Pie",
+                    "dojox/charting/action2d/MoveSlice",
+                    "dojox/charting/themes/MiamiNice",
+                    "dojox/charting/axis2d/Default",
+                    "dojox/charting/action2d/Tooltip",
+                    "dojox/charting/action2d/Magnify",
+                    "dojo/domReady!"
+                ],
+        function tfChart (Chart, Default, Pie, theme, MoveSlice,Tooltip) {
+            var chart = new Chart("pie_chart2");
+            chart.addPlot("default", {type: "Pie",radius: 80});
+
+            chart.addSeries("Series A", [
+                {y: {{ attribute(tfStat, 0) }},color:"#F62817",fontColor:"white"},
+                {y: {{ attribute(tfStat, 1) }},color:"#16E2F5", fontColor:"white"}
+
+            ]);
+
+
+            // Create the tooltip
+            var tip = new dojox.charting.action2d.Tooltip(chart,"default");
+            var mag1 = new dojox.charting.action2d.MoveSlice(chart, "default");
+
+
+
+            // Create the magnifier
+           // var mag = new Magnify(chart,"default");
+            chart.setTheme(theme);
+            chart.render();
+        });
 
     </script>
-
-
-
-
-
-
-
-        <!--<script>
-            $('a#linktf').on('click', function(e) {
-                e.preventDefault();
-                var url = $(this).attr('href');
-                $(".modal-body").html('<iframe width="100%" height="100%" frameborder="0" scrolling="yes" allowtransparency="true" src="'+url+'"></iframe>');
-
-            });
-
-
-        </script>-->
-
-
 
 
 {% endblock %}

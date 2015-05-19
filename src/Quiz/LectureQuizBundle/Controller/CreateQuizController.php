@@ -27,7 +27,7 @@ use Symfony\Component\HttpFoundation\Session;
 class CreateQuizController extends Controller
 {
     /**
-     *
+     * Renders the quiz creation page
      * @Route("/", name="create")
      * @Template("QuizLectureQuizBundle:Quiz:create.html.twig")
      */
@@ -52,7 +52,7 @@ class CreateQuizController extends Controller
 
 
     /**
-     * Creates a new entity.
+     * Creates a new graded quiz entity.
      *
      * @Route("/graded", name="createquiz_graded")
      *
@@ -70,8 +70,7 @@ class CreateQuizController extends Controller
         //get object of user that is logged in
         $user = $this->get('security.context')->getToken()->getUser();
 
-
-
+        //get user input
         if ($request->getMethod() == 'POST') {
             $quizName = $request->get('quizName');
             $question = $request->get('question');
@@ -107,21 +106,16 @@ class CreateQuizController extends Controller
             $entity->setPhoto($photoEntity);
             $entity->setLectureNote($lectureNote);
 
-
-
             //create new quiz object
             $quiz = new Quiz();
             $quiz->setQuizName($quizName);
             $quiz->setType($type);
 
-            // $session = $this->get("session");
-            //$sessionQuiz = $session->get("quiz");
-
             //relate quiz to logged in user
             if (is_object($user)) {
                 $quiz->setUser($user);
-
             }
+
             $gradedanswer = new gradedAnswer();
             $gradedanswer->setGradedQuestion($entity);
 
@@ -130,100 +124,35 @@ class CreateQuizController extends Controller
             //relates the quiz object to the graded question
             $entity->setQuiz($quiz);
 
+            //check what answer choice was choosen by user
+            if($isCorrect == 'answer1'){
+                $isCorrect = $answer[0];
+            }elseif($isCorrect == 'answer2'){
+                $isCorrect =$answer[1];
+            }elseif($isCorrect == 'answer3'){
+                $isCorrect = $answer[2];
+            }else{
+                $isCorrect=$answer[3];
+            }
 
             $em = $this->getDoctrine()->getManager();
-
-            if ($isCorrect == "answer1"){
-
                 foreach($answer as $ans){
 
                     //create new gradedAnswer object
                     $gradedanswer = new gradedAnswer();
                     $gradedanswer->setGradedQuestion($entity);
-
                     $gradedanswer->setAnswer($ans);
                     $gradedanswer->setVote(intval($vote));
-
-                    // var_dump($gradedanswer->setVote(intval($vote)));
-                    //die();
-
-
-                    $gradedanswer->setCorrect($answer[0]);
-
+                    $gradedanswer->setCorrect($isCorrect);
                     $em->persist($gradedanswer);
 
                 }
+            //save in database
                 $em->persist($photoEntity);
                 $em->persist($quiz);
                 $em->persist($lectureNote);
                 $em->persist($entity);
                 $em->flush();
-
-
-            }elseif($isCorrect == "answer2"){
-
-                foreach($answer as $ans){
-
-                    //create new gradedAnswer object
-                    $gradedanswer = new gradedAnswer();
-                    $gradedanswer->setGradedQuestion($entity);
-
-                    $gradedanswer->setAnswer($ans);
-                    $gradedanswer->setVote(intval($vote));
-                    $gradedanswer->setCorrect($answer[1]);
-
-                    $em->persist($gradedanswer);
-
-                }
-                $em->persist($photoEntity);
-                $em->persist($quiz);
-                $em->persist($lectureNote);
-                $em->persist($entity);
-                $em->flush();
-
-            }elseif($isCorrect == "answer3"){
-
-                foreach($answer as $ans){
-
-                    //create new gradedAnswer object
-                    $gradedanswer = new gradedAnswer();
-                    $gradedanswer->setGradedQuestion($entity);
-
-                    $gradedanswer->setAnswer($ans);
-                    $gradedanswer->setVote(intval($vote));
-                    $gradedanswer->setCorrect($answer[2]);
-
-                    $em->persist($gradedanswer);
-
-                }
-                $em->persist($photoEntity);
-                $em->persist($quiz);
-                $em->persist($lectureNote);
-                $em->persist($entity);
-                $em->flush();
-
-            }
-            else{
-
-                foreach($answer as $ans){
-
-                    //create new gradedAnswer object
-                    $gradedanswer = new gradedAnswer();
-                    $gradedanswer->setGradedQuestion($entity);
-
-                    $gradedanswer->setAnswer($ans);
-                    $gradedanswer->setVote(intval($vote));
-                    $gradedanswer->setCorrect($answer[3]);
-
-                    $em->persist($gradedanswer);
-
-                }
-                $em->persist($photoEntity);
-                $em->persist($lectureNote);
-                $em->persist($quiz);
-                $em->persist($entity);
-                $em->flush();
-            }
 
 
             //after submitting form redirect to profile page
@@ -238,7 +167,7 @@ class CreateQuizController extends Controller
 
 
     /**
-     * Creates a new entity.
+     * Creates a new outcome quiz entity.
      * @Route("/outcome", name="createquiz_outcome")
      *
      * @Template("QuizLectureQuizBundle:Quiz:outcome.html.twig")
@@ -253,10 +182,11 @@ class CreateQuizController extends Controller
 
         }
 
-        //create user object
+        //get logged in user object
 
         $user = $this->get('security.context')->getToken()->getUser();
 
+        //get user input
         if ($request->getMethod() == 'POST') {
 
             $quizName = $request->get('quizName');
@@ -275,7 +205,6 @@ class CreateQuizController extends Controller
             $photoObj = new Photo();
             $lectureNote= new LectureNote();
 
-
             //relate user to quiz
             if (is_object($user)) {
                 $quiz->setUser($user);
@@ -290,8 +219,6 @@ class CreateQuizController extends Controller
             $outcome->setLectureNote($lectureNote);
             //set file
             $lectureNote->setFile($note);
-
-
 
             //relate quiz to outcome question
             $outcome->setQuiz($quiz);
@@ -309,18 +236,11 @@ class CreateQuizController extends Controller
 
             $outcome->setPageNumber($page);
 
-
-
-
             //set quiz fields based on user input
-
             $quiz->setQuizName($quizName);
             $quiz->setType($type);
 
-
-
             //save user values to database
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($photoObj);
             $em->persist($outcome);
@@ -342,7 +262,7 @@ class CreateQuizController extends Controller
 
 
     /**
-     * Creates a new entity.
+     * Creates a new t/f entity.
      * @Route("/tf", name="createquiz_tf")
      *
      * @Template("QuizLectureQuizBundle:Quiz:tfquestion.html.twig")
@@ -369,7 +289,6 @@ class CreateQuizController extends Controller
             $page = $request->get('pagenumber');
             $custom_pageNum = $request->get('custom_pageNum');
 
-
             //create objects
             $tfQuestion = new TfQuestion();
             $photoObj = new Photo();
@@ -387,16 +306,15 @@ class CreateQuizController extends Controller
                 $quiz->setUser($user);
             }
 
-
             //set variables based on user input
             $tfQuestion->setQuestion($question);
 
+            //if custom page number is specified
             if($page == 'show'){
                 $page = $custom_pageNum;
             }
 
             $tfQuestion->setPagenumber($page);
-
 
             //relates TfQuestion to objects
             $tfQuestion->setPhoto($photoObj);
@@ -413,39 +331,15 @@ class CreateQuizController extends Controller
             //set file
             $lectureNote->setFile($note);
 
+            //check what answer choice was choosen by user
+            if($isCorrect == 'true'){
+                $isCorrect = 'true';
+            }else{
+                $isCorrect='false';
+            }
 
             //create entity manager
             $em = $this->getDoctrine()->getEntityManager();
-
-            if ($isCorrect == "true") {
-
-                $answers = ['true','false'];
-
-                foreach($answers  as $ans){
-
-                    //create new tfAnswer object
-                    $tfAnswer = new TfAnswer();
-                    $tfAnswer->setVote($vote);
-                    $tfAnswer->setCorrect('true');
-                    //set variable correct to true
-                    $tfAnswer->setAnswer($ans);
-
-                    //relates tfAnswer to TfQuestion
-                    $tfAnswer->setTfQuestion($tfQuestion);
-
-                    $em->persist($tfAnswer);
-
-                }
-
-
-                //save entities into database
-                $em->persist($photoObj);
-                $em->persist($quiz);
-                $em->persist($tfQuestion);
-                $em->persist($lectureNote);
-                $em->flush();
-
-            } else {
 
                 $answers = ['true','false'];
 
@@ -455,29 +349,23 @@ class CreateQuizController extends Controller
                     $tfAnswer = new TfAnswer();
                     $tfAnswer->setVote($vote);
                     $tfAnswer->setCorrect($isCorrect);
-                    //set variable correct to true
+                    //set variable correct to true/false
                     $tfAnswer->setAnswer($ans);
 
                     //relates tfAnswer to TfQuestion
                     $tfAnswer->setTfQuestion($tfQuestion);
-
                     $em->persist($tfAnswer);
-
-
                 }
 
                 //save entities into database
-                $em->persist($quiz);
                 $em->persist($photoObj);
+                $em->persist($quiz);
                 $em->persist($tfQuestion);
                 $em->persist($lectureNote);
                 $em->flush();
 
-            }
-
             //after submitting form redirect to profile page
             return $this->redirect($this->generateUrl('profile'));
-
         }
 
         //if request is not POST, show form

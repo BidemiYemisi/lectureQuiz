@@ -1,62 +1,46 @@
-{% extends '::base.html.twig' %}
-
-   {% block stylesheets %}
-
-       <!-- Custom styles for this template -->
-       <link href="{{ asset('styles/main.css') }}" type="text/css" rel="stylesheet"/>
-       <!-- Bootstrap core CSS -->
-       <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet"
-             media="screen"/>
-       <!-- Bootstrap theme -->
-       <link href="{{asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" />
-
-
-
-   {% endblock %}
-
-
 {% block body %}
 
-    <div class="header">
-        <div class="container" style="margin-top: 200px ">
-            <div class="row centered">
-                <div class="col-md-12">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="panel-title" style="font-family: cursive; font-size: large">Responses</div>
+        </div>
+
+        <div style="padding-top:30px" class="panel-body">
 
 
-                    {% for res in result %}
+            {% for res in result %}
 
 
-                        <strong style="font-size: large">{{ res.answer }}</strong>
-                        <span class="pull-right" answer="{{ loop.index0 }}"> </span>
+                <strong style="font-size: large">{{ res.answer }}</strong>
+                <span class="pull-right" answer="{{ loop.index0 }}"> </span>
 
 
-                        <div class="progress" style=" height: 39px; border-radius: 23px;">
-                            <p vote="{{ loop.index0 }}"
-                               class="progress-bar progress-bar-success progress-bar-striped active"
-                               role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                               style="width:{{ res.vote }}%; ">
+                <div class="progress" style=" height: 39px; border-radius: 23px;">
+                    <p vote="{{ loop.index0 }}"
+                       class="progress-bar progress-bar-warning progress-bar-striped"
+                       role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                       style="width:{{ res.vote }}%; ">
 
-                            </p>
-                        </div>
-
-
-                    {% endfor %}
+                    </p>
                 </div>
-            </div>
+
+
+            {% endfor %}
         </div>
     </div>
+
 
 {% endblock %}
 
   {% block javascripts %}
 
-      <!-- Bootstrap core JavaScript-->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="{{ asset('js/jquery.js') }}"></script>
-      <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+
 
       <script type="text/javascript">
 
+          //Code idea gotten from Server-Sent Event Example with Laravel
+          //By Zeid Rashwani -http://zrashwani.com
           var es = new EventSource("{{ path('current_result_graded',{quizid:id}) }}");
           es.addEventListener("message", function (e) {
               arr = JSON.parse(e.data);

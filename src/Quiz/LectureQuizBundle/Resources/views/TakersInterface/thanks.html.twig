@@ -1,9 +1,11 @@
-{% extends'::base.html.twig' %}
+<!--Disables browser backward button-->
 
-{% block header %}
-{% endblock %}
 
 
 {% block body %}
-    <h3 class="text-center">Thanks, your choice has been submitted</h3>
+    <script type="text/javascript">
+        window.history.forward();
+    </script>
+    <h3 style=" font-size: 30px;text-align: center;font-family: Times New Roman, Georgia, Serif;">Thanks, your choice
+        has been submitted</h3>
 {% endblock %}

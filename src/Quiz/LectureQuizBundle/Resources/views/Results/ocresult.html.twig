@@ -1,48 +1,45 @@
-{% extends '::base.html.twig' %}
-
-
-
 {% block body %}
 
-    <div class="header">
-        <div class="container" style="margin-top: 100px ">
-            <div class="row centered">
-                <div class="col-md-12">
-
-
-                    <div class="panel panel-info">
-                        <div class="panel-heading"> <h2 style="font-family: cursive;">Response</h2> </div>
-                        <div class="panel-body" style="height: 400px">
-                            {% for res in result %}
-                                <p ocResult="{{ loop.index0 }}">
-                                    {{ res.answercode }}
-                                </p>
-
-                            {% endfor %}
-                       </div>
-
-                    </div>
-
-
-                </div>
-            </div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="panel-title" style="font-family: cursive; font-size: large">Responses</div>
         </div>
+
+        <div style="padding-top:30px" class="panel-body">
+
+
+            {% for i in 0..10 %}
+                <p ocResult="{{ i }}">
+
+                </p><input name="resp" type="checkbox">
+
+                <hr style="border: dotted thin"><br/>
+            {% endfor %}
+
+
+        </div>
+
     </div>
+{% endblock %}
 
-
+{% block javascripts %}
     <script type="text/javascript">
+
+        //Code idea gotten from Server-Sent Event Example with Laravel
+        //By Zeid Rashwani -http://zrashwani.com
 
         var es = new EventSource("{{ path('current_result_oc',{quiz_id:id}) }}");
         es.addEventListener("message", function (e) {
             arr = JSON.parse(e.data);
 
+
             for (x in arr) {
 
                 $('[ocResult="' + x + '"]').html(arr[x].answercode);
+                //document.getElementById("result").innerHTML += arr[x].answercode + "<br>";
+
             }
         }, false);
     </script>
-
-
-
 {% endblock %}

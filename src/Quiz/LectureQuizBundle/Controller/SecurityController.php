@@ -12,6 +12,7 @@ use Quiz\LectureQuizBundle\Entity\Quiz;
 class SecurityController extends Controller
 {
     /**
+     * Login Controller
      * @Route("/login", name="login")
      */
     public function loginAction(Request $request)

@@ -23,6 +23,7 @@ class ResultController extends Controller
 {
 
     /**
+     * Gets the current vote count for a graded question
      * @param $id
      *
      */
@@ -44,7 +45,11 @@ class ResultController extends Controller
 
     }
 
-
+    /**
+     * Gets the current vote count for a t/f question
+     * @param $id
+     *
+     */
     public function getCurrentTfResultAction($id)
     {
 
@@ -63,9 +68,11 @@ class ResultController extends Controller
 
     }
 
-
-    //use quiz id to get answers to outcome question
-    //limit result to 3
+    /**
+     * use quiz id to get answers to outcome question
+     * @param $id
+     *
+     */
     public function getCurrentOutcomeResultAction($id)
     {
         $em = $this->getDoctrine()->getManager();
@@ -84,23 +91,27 @@ class ResultController extends Controller
     }
 
 
+    //get the difference in votes when new responses are gotten
+    // Code idea gotten from Server-Sent Event Example with Laravel
+    //By Zeid Rashwani -http://zrashwani.com
     protected function getChangedGradedResultAction($newResult, $oldResuilt)
     {
+        $ret = array(); //create new array
 
-        // $cur= array();
-        $ret = array();
+        //loop through current result
         foreach ($newResult as $vote => $new) {
 
-
+            //set current result to array if old result is not set
             if (!isset($oldResuilt[$vote])) {
 
                 $ret[$vote]['answer'] = $new['answer'];
 
                 $ret[$vote]['vote'] = $new['vote'];
 
-
+                //if old vote is not equals to new current vote
             } elseif ($oldResuilt[$vote]['vote'] != $new['vote']) {
 
+                //set votes and answer and return
                 $ret[$vote]['answer'] = $new['answer'];
                 $ret[$vote]['vote'] = $new['vote'];
             }
@@ -109,20 +120,28 @@ class ResultController extends Controller
         return $ret;
     }
 
-
+    //get new outcome answers
     protected function getChangedOutcomeResultAction($newResult, $oldResult)
     {
-
+        //get length of newResult and oldResult arrays
         $newcount = count($newResult);
         $oldcount = count($oldResult);
 
-
+        //if the length are not equal
         if ($oldcount != $newcount) {
 
-            $oldResult = $newResult;
+            //loop through newResult and check if old Result is set
+            for ($i = 0; $i < $newcount; $i++) {
+                foreach ($newResult as $i => $new) {
 
+                    if (!isset($oldResult[$i]))
+                        //set old Result with new Result value and return
+                        $oldResult[$i]['answercode'] = $new['answercode'];
+                }
+                // $oldResult = $newResult;
+
+            }
         }
-
 
         return $oldResult;
 
@@ -130,38 +149,31 @@ class ResultController extends Controller
 
 
     /**
-     *
+     * Get streams of votes for graded quiz
+     * Code idea gotten from Server-Sent Event Example with Laravel
+     * By Zeid Rashwani -http://zrashwani.com
      * @Route("/graded/{quizid}", name="current_result_graded")
      * @Template()
      */
     public function getGradedValuesAction($quizid)
     {
-
-
+        //create new streamResponse object
         $response = new StreamedResponse();
 
+        //get new streams results
         $response->setCallback(function () use ($quizid) {
 
             $old_result = array();
 
             while (true) {
 
-                $em = $this->getDoctrine()->getManager();
-                $qb = $em->createQueryBuilder();
-                $qb->select('q.answer', 'q.vote')
-                    ->from('QuizLectureQuizBundle:GradedAnswer', 'q')
-                    ->innerJoin('q.gradedQuestion', 'p')
-                    ->where('p.quiz = :quizId')
-                    ->setParameter('quizId', $quizid);
+                //get current votes in database
+                $gradedResult = $this->getCurrentGradedResultAction($quizid);
 
-                $query = $qb->getQuery();
-                $gradedResult = $query->getResult();
-
-                // $gradedResult = $this->getCurrentGradedResultAction($quizid);
-
+                //get new votes in database
                 $changed_data = $this->getChangedGradedResultAction($gradedResult, $old_result);
 
-
+                //change the data to Json format
                 if (count($changed_data)) {
 
                     echo 'data: ' . json_encode($changed_data) . "\n\n";
@@ -173,16 +185,20 @@ class ResultController extends Controller
 
                 //delay execution of script for 3sec
                 sleep(3);
+
+                //assign current votes to old vote result
                 $old_result = $gradedResult;
 
 
             }
         });
+
+        //configure header
         $response->headers->set('Content-Type', 'text/event-stream');
         $response->headers->set('Cache-Control', 'no-cache');
         $response->headers->set('Connection', 'keep-alive');
 
-
+        //return stream responses
         return $response;
 
 
@@ -190,26 +206,32 @@ class ResultController extends Controller
 
 
     /**
-     *
+     * Get streams of votes for t/f quiz
+     * Code idea gotten from Server-Sent Event Example with Laravel
+     * By Zeid Rashwani -http://zrashwani.com
      * @Route("/tf/{qid}", name="current_result_tf")
      * @Template()
      */
     public function getTfValuesAction($qid)
     {
+        //create new stream response
         $response = new StreamedResponse();
+
 
         $response->setCallback(function () use ($qid) {
 
             $oldResult = array();
 
+
             while (true) {
 
-
+                //get current votes fot t/f quiz
                 $tfResult = $this->getCurrentTfResultAction($qid);
 
+                //get new votes
                 $changedData = $this->getChangedGradedResultAction($tfResult, $oldResult);
 
-
+                //format vote data as Json
                 if (count($changedData)) {
 
                     echo 'data: ' . json_encode($changedData) . "\n\n";
@@ -220,12 +242,14 @@ class ResultController extends Controller
                 }
 
                 //delay execution of script for 3sec
-               sleep(3);
+                sleep(3);
+                //assign current result to old result
                 $oldResult = $tfResult;
-
 
             }
         });
+
+        //configure the header and return stream response
         $response->headers->set('Content-Type', 'text/event-stream');
         $response->headers->set('Cache-Control', 'no-cache');
         $response->headers->set('Connection', 'keep-alive');
@@ -237,12 +261,15 @@ class ResultController extends Controller
     }
 
     /**
-     *
+     * Get streams of result for outcome quiz
+     * Code idea gotten from Server-Sent Event Example with Laravel
+     * By Zeid Rashwani -http://zrashwani.com
      * @Route("/oc/{quiz_id}", name="current_result_oc")
      * @Template()
      */
     public function getOutcomeValuesAction($quiz_id)
     {
+        //create new stream response object
         $response = new StreamedResponse();
 
         $response->setCallback(function () use ($quiz_id) {
@@ -250,27 +277,29 @@ class ResultController extends Controller
             $oldResult = array();
             while (true) {
 
-
+                // get current result and new results
                 $ocResult = $this->getCurrentOutcomeResultAction($quiz_id);
                 $changedResult = $this->getChangedOutcomeResultAction($ocResult, $oldResult);
 
-                // var_dump($changedResult);
-                // die();
-
+                //format data as Json
                 echo 'data: ' . json_encode($changedResult) . "\n\n";
 
-                ob_end_flush();//strange behaviour won't work
-                //ob_flush();
+                //ob_end_flush();//strange behaviour won't work
+                ob_flush();
                 flush();
 
 
                 //delay execution of script for 3sec
-                sleep(3);
+                // sleep(3);
+
+                //assign current result to old result
                 $oldResult = $ocResult;
 
 
             }
         });
+
+        //configure header and return response
         $response->headers->set('Content-Type', 'text/event-stream');
         $response->headers->set('Cache-Control', 'no-cache');
         $response->headers->set('Connection', 'keep-alive');
@@ -282,7 +311,7 @@ class ResultController extends Controller
     }
 
     /**
-     *
+     * Displays the graded Result page
      * @Route("/gdshow/{id}", name="result_graded")
      * @Template("QuizLectureQuizBundle:Results:result.html.twig")
      */
@@ -298,7 +327,7 @@ class ResultController extends Controller
 
 
     /**
-     *
+     * Displays the T/f Result page
      * @Route("/tfshow/{id}", name="result_tf")
      * @Template("QuizLectureQuizBundle:Results:tfresult.html.twig")
      */
@@ -314,19 +343,15 @@ class ResultController extends Controller
 
 
     /**
-     *
+     * Displays the outcome Result page
      * @Route("/ocshow/{id}", name="result_oc")
      * @Template("QuizLectureQuizBundle:Results:ocresult.html.twig")
      */
     public function displayOutcomeResultAction($id)
     {
-        //$result_oc =$this->getOutcomeValuesAction($id);
+        // $result_oc =$this->getOutcomeValuesAction($id);
 
         $result_oc = $this->getCurrentOutcomeResultAction($id);
-        //var_dump($result_oc);
-        //die();
-
-
         return $this->render("QuizLectureQuizBundle:Results:ocresult.html.twig",
             array('result' => $result_oc,
                 'id' => $id

@@ -40,7 +40,7 @@ class RegistrationController extends Controller
 
 
     /**
-     * Registration controller.
+     * Registration controller: Creates new user entity
      *
      * @Route("/create", name="account_create")
      * @Template()
@@ -59,7 +59,7 @@ class RegistrationController extends Controller
             $em->persist($registration->getUser());
             $em->flush();
 
-            return $this->redirect($this->generateUrl('my_index'));
+            return $this->redirect($this->generateUrl('login'));
         }
 
         return $this->render(

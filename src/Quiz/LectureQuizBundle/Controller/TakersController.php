@@ -23,6 +23,8 @@ use Symfony\Component\HttpFoundation\Response;
 class TakersController extends Controller
 {
 
+
+    //get the quiz_id of outcome question
     public function getOcQuizId($questionId){
         $ocQuiz = null;
         $quizId= null;
@@ -220,6 +222,7 @@ class TakersController extends Controller
 
 
     /**
+     * Handles the outcome quiz taking functionality
      * @Route("/oc/vote/answer", name= "outcome_takers_answer")
      * @Template()
      */
@@ -280,7 +283,7 @@ class TakersController extends Controller
 
 
     /**
-     * Displays quiz answer choices
+     * Displays T/f quiz answer choices
      * @Route("/tf/{id}/", name="take_tf")
      * @Template("QuizLectureQuizBundle:TakersInterface:tfanswer.html.twig")
      */

@@ -1,11 +1,15 @@
 {% extends '::base.html.twig' %}
 
 {% block header %}
+    <script type="text/javascript">
+        window.history.forward();
+    </script>
 {% endblock %}
 
 {% block body %}
 
     <div class="header">
+
         <div class="container">
             <div class="row">
 
@@ -26,7 +30,7 @@
 
 
                         <div class="form-group">
-                            <textarea cols="50" rows="5" placeholder="Please enter your answer"
+                            <textarea cols="50" rows="5" required="required" placeholder="Please enter your answer"
                                       name="answercode"></textarea>
                         </div>
 

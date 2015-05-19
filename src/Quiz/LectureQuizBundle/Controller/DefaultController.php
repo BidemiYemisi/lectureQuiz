@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 class DefaultController extends Controller
 {
     /**
+     * renders the index page
      * @Route("/", name="my_index")
      * @Template()
      */

@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b52ee76-5a25-442c-9114-0b25548db1bd" name="Default" comment="" />
+    <list default="true" id="8b52ee76-5a25-442c-9114-0b25548db1bd" name="Default" comment="updated">
+      <change type="DELETED" beforePath="C:\xampp\htdocs\lectureQuiz\web\js\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\lectureQuiz\web\js\barchart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\lectureQuiz\web\js\main.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/CreateQuizController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/CreateQuizController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Image/Pdf.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Image/Pdf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/RegistrationController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/RegistrationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/ResultController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/ResultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/SecurityController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/SecurityController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/app/SymfonyRequirements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_prod.yml" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/form.js" afterPath="$PROJECT_DIR$/web/js/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/gdanswer.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/gdanswer.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/graded.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/graded.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Security/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/ocanswer.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/ocanswer.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/ocresult.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/ocresult.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/outcome.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/outcome.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/profile.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/profile.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/profileController.php" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/profileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Account/register.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Account/register.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/result.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/result.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/tfanswer.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/tfanswer.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/tfquestion.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/tfquestion.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/tfresult.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/tfresult.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/thanks.html.twig" afterPath="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/thanks.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="lectureQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,69 +57,22 @@
     <favorites_list name="lectureQuiz" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1343">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_prod.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5675676" vertical-offset="0" max-vertical-offset="629">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/thanks.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/taker.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersAnswerController.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/outcomeanswer.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/TfAnswer.orm.xml" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/TfAnswer.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/ocanswer.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/tfanswer.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/test2.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/Photo.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/LectureNote.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/OutcomeQuestion.orm.xml" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/LectureNote.orm.xml" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/Photo.orm.xml" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/OutcomeQuestion.php" />
         <option value="$PROJECT_DIR$/web/js/Field.js" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/create.html.twig" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/GradedQuestion.orm.xml" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/TfQuestion.orm.xml" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/GradedQuestion.php" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/TfQuestion.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Image/Pdf.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/nonquiz.html.twig" />
         <option value="$PROJECT_DIR$/web/js/barchat.js" />
-        <option value="$PROJECT_DIR$/web/js/form.js" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/GradedAnswer/result.html.twig" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/profile.html.twig" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/graded.html.twig" />
@@ -94,23 +80,42 @@
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/tfquestion.html.twig" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/outcome.html.twig" />
         <option value="$PROJECT_DIR$/web/js/field.js" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/profileController.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/CreateQuizController.php" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/create.html.twig" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/TakersAnswer.php" />
         <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/TakersAnswer.orm.xml" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/ocanswer.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersController.php" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/result.html.twig" />
         <option value="$PROJECT_DIR$/web/styles/main.css" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/ocresult.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/ResultController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/profile.html.twig" />
-        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/tfresult.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/config_prod.yml" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/gdanswer.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/thanks.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/ocanswer.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/tfanswer.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/CreateQuizController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/RegistrationController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/SecurityController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Account/register.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Security/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/profile.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/ResultController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/result.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/tfresult.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/ocresult.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/form.js" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/EditQuiz/ocEdit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/profileController.php" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/EditQuiz/tfEdit.html.twig" />
+        <option value="$PROJECT_DIR$/web/js/editForm.js" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/EditQuiz/gdEdit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/tfquestion.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/outcome.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/graded.html.twig" />
+        <option value="$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Image/Pdf.php" />
       </list>
     </option>
   </component>
@@ -124,7 +129,7 @@
     <option name="width" value="1382" />
     <option name="height" value="784" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -147,6 +152,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,7 +199,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="styles" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,21 +249,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lectureQuiz" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lectureQuiz" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="Quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LectureQuizBundle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -279,17 +279,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="Quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LectureQuizBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lectureQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lectureQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LectureQuizBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +333,7 @@
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
@@ -376,9 +409,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -386,9 +420,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18655589" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23640484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -400,6 +434,28 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19108762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -416,6 +472,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -424,80 +482,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/GradedAnswer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.189189" vertical-offset="2" max-vertical-offset="3111">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/LectureNote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.9900827" vertical-offset="0" max-vertical-offset="2516">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/itbz/fpdi/src/fpdi/FPDF/TPL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34710744" vertical-offset="5944" max-vertical-offset="9537">
-          <caret line="362" column="33" selection-start-line="362" selection-start-column="33" selection-end-line="362" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/Photo.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.302589" vertical-offset="0" max-vertical-offset="618">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/LectureNote.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33009708" vertical-offset="0" max-vertical-offset="618">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/OutcomeQuestion.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33009708" vertical-offset="0" max-vertical-offset="618">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/GradedQuestion.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33009708" vertical-offset="0" max-vertical-offset="618">
-          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/config/doctrine/TfQuestion.orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33009708" vertical-offset="0" max-vertical-offset="618">
-          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/OutcomeQuestion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8181818" vertical-offset="4384" max-vertical-offset="5015">
           <caret line="289" column="5" selection-start-line="262" selection-start-column="3" selection-end-line="289" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/GradedQuestion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4661157" vertical-offset="3611" max-vertical-offset="4318">
-          <caret line="231" column="21" selection-start-line="231" selection-start-column="21" selection-end-line="231" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -508,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Image/Pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9187396" vertical-offset="1384" max-vertical-offset="2125">
-          <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.027027028" vertical-offset="221" max-vertical-offset="850">
@@ -522,123 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/noquiz.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28099173" vertical-offset="85" max-vertical-offset="731">
-          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/barchart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8378378" vertical-offset="0" max-vertical-offset="629">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/Quiz.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.086235486" vertical-offset="409" max-vertical-offset="6681">
           <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="9" column="347" selection-start-line="9" selection-start-column="347" selection-end-line="9" selection-end-column="347" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Security/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1241">
-          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/graded.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08614865" vertical-offset="0" max-vertical-offset="1683">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/outcome.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5405405" vertical-offset="445" max-vertical-offset="1207">
-          <caret line="45" column="173" selection-start-line="45" selection-start-column="173" selection-end-line="45" selection-end-column="173" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/tfquestion.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5591216" vertical-offset="587" max-vertical-offset="1411">
-          <caret line="54" column="174" selection-start-line="54" selection-start-column="174" selection-end-line="54" selection-end-column="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/field.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83835185" vertical-offset="202" max-vertical-offset="935">
-          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Form/Model/Registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Form/Type/UserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16859505" vertical-offset="0" max-vertical-offset="901">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Form/Type/RegistrationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28099173" vertical-offset="0" max-vertical-offset="605">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/tfanswer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6743802" vertical-offset="0" max-vertical-offset="850">
-          <caret line="24" column="80" selection-start-line="24" selection-start-column="80" selection-end-line="24" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/gdanswer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="816">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.28264463" vertical-offset="171" max-vertical-offset="1173">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92727274" vertical-offset="85" max-vertical-offset="1088">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -656,24 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9173554" vertical-offset="5699" max-vertical-offset="6800">
-          <caret line="267" column="44" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/TakersAnswer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30743802" vertical-offset="460" max-vertical-offset="2074">
           <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/ocanswer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7338843" vertical-offset="100" max-vertical-offset="799">
-          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -691,27 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/create.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1530">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/profileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.264462" vertical-offset="4324" max-vertical-offset="14093">
-          <caret line="774" column="0" selection-start-line="774" selection-start-column="0" selection-end-line="774" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/CreateQuizController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5404959" vertical-offset="64" max-vertical-offset="8143">
-          <caret line="38" column="64" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7753378" vertical-offset="0" max-vertical-offset="1496">
@@ -719,78 +552,295 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/tfresult.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16915423" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/result.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.389718" vertical-offset="12" max-vertical-offset="1394">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/profile.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3542373" vertical-offset="7407" max-vertical-offset="9316">
-          <caret line="448" column="12" selection-start-line="448" selection-start-column="12" selection-end-line="448" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7048093" vertical-offset="0" max-vertical-offset="603">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#54#111#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/ResultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80597013" vertical-offset="5209" max-vertical-offset="5814">
-          <caret line="335" column="0" selection-start-line="335" selection-start-column="0" selection-end-line="335" selection-end-column="0" />
-          <folding>
-            <element signature="e#53#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/ocresult.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3018242" vertical-offset="107" max-vertical-offset="918">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="629">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1343">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.027027028" vertical-offset="0" max-vertical-offset="1343">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027027028" vertical-offset="0" max-vertical-offset="629">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/itbz/fpdi/src/fpdi/FPDF/TPL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34710744" vertical-offset="5417" max-vertical-offset="9537">
+          <caret line="331" column="20" selection-start-line="331" selection-start-column="20" selection-end-line="331" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/itbz/fpdf/src/fpdf/FPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34797296" vertical-offset="15842" max-vertical-offset="30770">
+          <caret line="950" column="9" selection-start-line="950" selection-start-column="9" selection-end-line="950" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73057854" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/GradedQuestion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0447761" vertical-offset="220" max-vertical-offset="4318">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Entity/GradedAnswer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.54710746" vertical-offset="331" max-vertical-offset="3094">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/thanks.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28716215" vertical-offset="0" max-vertical-offset="592">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/ocanswer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14358108" vertical-offset="0" max-vertical-offset="867">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/tfanswer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4214876" vertical-offset="0" max-vertical-offset="901">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/noquiz.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="605">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="605">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Form/Type/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16859505" vertical-offset="0" max-vertical-offset="901">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16859505" vertical-offset="0" max-vertical-offset="731">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/TakersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55041325" vertical-offset="2455" max-vertical-offset="6698">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Account/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22479339" vertical-offset="0" max-vertical-offset="799">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Security/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.112396695" vertical-offset="0" max-vertical-offset="1326">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/TakersInterface/gdanswer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3371901" vertical-offset="0" max-vertical-offset="884">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1584786" vertical-offset="0" max-vertical-offset="935">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/ResultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21322314" vertical-offset="4206" max-vertical-offset="6069">
+          <caret line="265" column="45" selection-start-line="264" selection-start-column="7" selection-end-line="265" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/result.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4892562" vertical-offset="418" max-vertical-offset="1122">
+          <caret line="42" column="50" selection-start-line="41" selection-start-column="10" selection-end-line="42" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/tfresult.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59504133" vertical-offset="269" max-vertical-offset="1037">
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Results/ocresult.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.814876" vertical-offset="0" max-vertical-offset="867">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Form/Model/Registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0049586776" vertical-offset="3" max-vertical-offset="765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0033058" vertical-offset="328" max-vertical-offset="1173">
+          <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Form/Type/RegistrationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28099173" vertical-offset="0" max-vertical-offset="605">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Profile/profile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.271074" vertical-offset="6707" max-vertical-offset="7582">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/EditQuiz/ocEdit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6959459" vertical-offset="302" max-vertical-offset="1054">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/EditQuiz/tfEdit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6347107" vertical-offset="398" max-vertical-offset="1105">
+          <caret line="46" column="128" selection-start-line="46" selection-start-column="128" selection-end-line="46" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44012946" vertical-offset="0" max-vertical-offset="618">
+          <caret line="16" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/create.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6628099" vertical-offset="925" max-vertical-offset="1530">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/CreateQuizController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-183.88461" vertical-offset="1356" max-vertical-offset="6239">
+          <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/editForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/EditQuiz/gdEdit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05743243" vertical-offset="544" max-vertical-offset="2261">
+          <caret line="34" column="72" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/profileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19030" max-vertical-offset="19635">
+          <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5675676" vertical-offset="0" max-vertical-offset="629">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="1105">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/tfquestion.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="587" max-vertical-offset="1411">
+          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/outcome.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="1207">
+          <caret line="39" column="57" selection-start-line="39" selection-start-column="57" selection-end-line="39" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Image/Pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47272727" vertical-offset="1176" max-vertical-offset="2635">
+          <caret line="89" column="24" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Quiz/LectureQuizBundle/Resources/views/Quiz/graded.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6469595" vertical-offset="569" max-vertical-offset="1683">
+          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
           <folding />
         </state>
       </provider>
